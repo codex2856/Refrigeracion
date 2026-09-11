@@ -37,10 +37,10 @@ export function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex items-center gap-3"
+          className="flex w-full flex-col items-center gap-2 text-center"
         >
-          <img src={asset('logo-mark.png')} alt="" className="h-12 w-auto flex-none sm:h-16" />
-          <span className="font-display text-xl font-extrabold uppercase leading-tight tracking-wide text-white sm:text-3xl">
+          <img src={asset('logo-mark.png')} alt="" className="h-24 w-auto sm:h-32 lg:h-36" />
+          <span className="font-display text-2xl font-extrabold uppercase leading-tight tracking-wide text-white sm:text-4xl">
             {business.name}
           </span>
         </motion.div>
