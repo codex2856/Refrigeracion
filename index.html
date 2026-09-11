@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es-VE">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#081226" />
+
+    <!--
+      SEO: cuando se confirme el nombre comercial real ([NOMBRE] en src/data/business.ts),
+      actualiza <title>, la meta description, los OG tags y el JSON-LD de abajo con ese nombre.
+    -->
+    <title>Técnico de Refrigeración en Caracas | Aires Acondicionados, Neveras y Lavadoras</title>
+    <meta
+      name="description"
+      content="Técnico de refrigeración en Caracas. Reparación y mantenimiento de aires acondicionados, neveras, lavadoras y electrodomésticos. Diagnóstico y atención directa con el técnico."
+    />
+    <link rel="canonical" href="https://TU-DOMINIO-AQUI.com/" />
+    <!-- ^ Reemplaza TU-DOMINIO-AQUI.com por el dominio real cuando esté disponible (también en sitemap.xml y robots.txt). -->
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_VE" />
+    <meta property="og:site_name" content="Técnico de Refrigeración en Caracas" />
+    <meta property="og:title" content="Técnico de Refrigeración en Caracas | Aires Acondicionados, Neveras y Lavadoras" />
+    <meta
+      property="og:description"
+      content="Reparación y mantenimiento de aires acondicionados, neveras, lavadoras y electrodomésticos en Caracas. Contacta directamente con el técnico."
+    />
+    <meta property="og:url" content="https://TU-DOMINIO-AQUI.com/" />
+    <meta property="og:image" content="https://TU-DOMINIO-AQUI.com/og-image.jpg" />
+    <!-- ^ Sube una imagen og-image.jpg (1200x630) a /public cuando haya fotografías reales. -->
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Técnico de Refrigeración en Caracas" />
+    <meta
+      name="twitter:description"
+      content="Reparación y mantenimiento de aires acondicionados, neveras, lavadoras y electrodomésticos en Caracas."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--
+      Datos estructurados Schema.org (LocalBusiness / HVACBusiness).
+      Solo se incluyen campos confirmados. NO se ha inventado teléfono, dirección,
+      horario ni valoraciones. Añade "telephone", "address", "openingHoursSpecification"
+      y "image" en cuanto tengamos esos datos reales (ver src/data/business.ts).
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HVACBusiness",
+        "name": "Técnico de Refrigeración en Caracas",
+        "description": "Servicio técnico de reparación y mantenimiento de aires acondicionados, neveras, lavadoras y electrodomésticos en Caracas, Venezuela.",
+        "areaServed": {
+          "@type": "City",
+          "name": "Caracas, Venezuela"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Caracas",
+          "addressCountry": "VE"
+        },
+        "url": "https://TU-DOMINIO-AQUI.com/",
+        "priceRange": ""
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

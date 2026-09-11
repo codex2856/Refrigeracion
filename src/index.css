@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  /* -- deep navy night + cool ice accents, warm amber for CTA contrast -- */
+  --color-cloud: #f6f9fc;
+  --color-cloud-dim: #eaf1f7;
+  --color-cloud-line: #d7e3ee;
+
+  --color-night: #081226;
+  --color-night-soft: #101d3a;
+  --color-night-line: #1e2f4d;
+
+  --color-ink: #0c1a2e;
+  --color-ink-soft: #48586f;
+  --color-ink-faint: #8494a8;
+  --color-paper: #f6f9fc;
+
+  --color-ice: #38bdf8;
+  --color-ice-dark: #0369a1;
+  --color-ice-light: #e0f6ff;
+
+  --color-frost: #a5f3fc;
+
+  --color-amber: #fb923c;
+  --color-amber-dark: #c2410c;
+  --color-amber-light: #ffedd5;
+
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #128c4a;
+
+  --font-display: "Sora", "Manrope", system-ui, sans-serif;
+  --font-body: "Space Grotesk", system-ui, sans-serif;
+
+  --shadow-soft: 0 1px 2px rgba(8, 18, 38, 0.06), 0 10px 26px -10px rgba(8, 18, 38, 0.22);
+  --shadow-lift: 0 6px 14px rgba(8, 18, 38, 0.12), 0 24px 48px -16px rgba(8, 18, 38, 0.36);
+  --shadow-glow: 0 0 0 1px rgba(56, 189, 248, 0.25), 0 18px 40px -12px rgba(56, 189, 248, 0.35);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cloud);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  ::selection {
+    background-color: var(--color-ice);
+    color: var(--color-night);
+  }
+}
+
+/* faint grid texture for dark sections, kept cheap (no image asset) */
+.grain {
+  position: relative;
+}
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.06) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* frosted-glass treatment for badges/cards on dark backgrounds */
+.frost {
+  background-color: rgba(16, 29, 58, 0.55);
+  border: 1px solid rgba(165, 243, 252, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+/* cool duotone treatment reserved for real work photos once available */
+.photo-cool {
+  filter: saturate(1.05) contrast(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
