@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
-import { business, hasPhone, hasWhatsapp, phoneLink, whatsappLink } from '../data/business';
+import { business, hasPhone, hasWhatsapp, instagramLink, phoneLink, whatsappLink } from '../data/business';
 import { Placeholder } from './Placeholder';
-import { IconClock, IconPhone, IconPin, IconWhatsApp } from './icons';
+import { IconClock, IconInstagram, IconPhone, IconPin, IconWhatsApp } from './icons';
 
 export function Contact() {
   return (
@@ -73,6 +73,14 @@ export function Contact() {
             <IconPin className="h-4 w-4 text-ice" />
             {business.location}
           </span>
+          <a
+            href={instagramLink()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 transition-colors hover:text-ice"
+          >
+            <IconInstagram className="h-4 w-4 text-ice" />@{business.instagram}
+          </a>
         </motion.div>
       </div>
     </section>

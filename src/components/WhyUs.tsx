@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { SectionTitle } from './SectionTitle';
+import { business } from '../data/business';
 import { IconClipboardCheck, IconMessageCircle, IconPin, IconSearch, IconUser, IconWrench } from './icons';
 import type { ComponentType, SVGProps } from 'react';
 
@@ -38,7 +39,7 @@ const REASONS: Reason[] = [
   {
     Icon: IconMessageCircle,
     title: 'Contacto directo con el técnico',
-    description: 'Coordinas la visita y el servicio directamente, sin intermediarios.',
+    description: `Coordinas la visita y el servicio directamente con ${business.ownerName}, sin intermediarios.`,
   },
 ];
 

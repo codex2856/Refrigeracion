@@ -7,7 +7,13 @@
  */
 export const business = {
   /** Nombre del técnico o nombre comercial. */
-  name: 'Refrigeracionwas',
+  name: 'Refrigeración WAS',
+
+  /** Nombre del técnico que atiende. */
+  ownerName: 'Wilfredo Salazar',
+
+  /** Usuario de Instagram, sin @. */
+  instagram: 'refrigeracion_was',
 
   /** Número de WhatsApp SOLO dígitos con código de país, sin +, sin espacios. Ej: "584121234567" */
   whatsapp: '',
@@ -61,4 +67,9 @@ export function whatsappLink(message?: string): string {
 export function phoneLink(): string {
   if (!hasPhone) return '#contacto';
   return `tel:${business.phone.replace(/[^\d+]/g, '')}`;
+}
+
+/** Enlace al perfil de Instagram. */
+export function instagramLink(): string {
+  return `https://instagram.com/${business.instagram}`;
 }

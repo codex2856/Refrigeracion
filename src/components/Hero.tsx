@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { business, hasPhone, hasWhatsapp, phoneLink, whatsappLink } from '../data/business';
 import { Placeholder } from './Placeholder';
+import { asset } from '../lib/asset';
 import { IconDroplet, IconPhone, IconPin, IconSnowflake, IconWhatsApp, IconWind } from './icons';
 
 const floatIcons = [
@@ -32,10 +33,22 @@ export function Hero() {
       ))}
 
       <div className="relative mx-auto flex min-h-[86vh] max-w-6xl flex-col justify-center gap-7 px-4 py-24 sm:min-h-[80vh] sm:px-6 lg:px-8">
-        <motion.span
+        <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
+          className="flex items-center gap-3"
+        >
+          <img src={asset('logo-mark.png')} alt="" className="h-12 w-auto flex-none sm:h-16" />
+          <span className="font-display text-xl font-extrabold uppercase leading-tight tracking-wide text-white sm:text-3xl">
+            {business.name}
+          </span>
+        </motion.div>
+
+        <motion.span
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.05 }}
           className="frost inline-flex w-fit items-center gap-2 rounded-full px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-frost"
         >
           <IconPin className="h-4 w-4" />

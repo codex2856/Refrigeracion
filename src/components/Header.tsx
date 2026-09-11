@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { business, whatsappLink } from '../data/business';
-import { IconMenu, IconSnowflake, IconWhatsApp, IconX } from './icons';
+import { asset } from '../lib/asset';
+import { IconMenu, IconWhatsApp, IconX } from './icons';
 
 const LINKS = [
   { href: '#servicios', label: 'Servicios' },
@@ -30,11 +31,11 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <a href="#top" className="flex min-w-0 items-center gap-2 text-white">
-          <span className="inline-flex h-9 w-9 flex-none items-center justify-center rounded-xl bg-ice/15 text-ice">
-            <IconSnowflake className="h-5 w-5" />
+        <a href="#top" className="flex min-w-0 items-center gap-2.5 text-white">
+          <img src={asset('logo-mark.png')} alt="" className="h-9 w-auto flex-none sm:h-10" />
+          <span className="truncate font-display text-base font-extrabold leading-none tracking-tight sm:text-lg lg:text-xl">
+            {business.name}
           </span>
-          <span className="truncate font-display text-base font-bold tracking-tight sm:text-lg">{business.name}</span>
         </a>
 
         <nav className="hidden items-center gap-6 lg:flex">
