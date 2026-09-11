@@ -7,7 +7,7 @@
  */
 export const business = {
   /** Nombre del técnico o nombre comercial. */
-  name: '[NOMBRE]',
+  name: 'Refrigeracionwas',
 
   /** Número de WhatsApp SOLO dígitos con código de país, sin +, sin espacios. Ej: "584121234567" */
   whatsapp: '',
