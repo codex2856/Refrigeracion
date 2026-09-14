@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { SectionTitle } from './SectionTitle';
 import { business, whatsappLink } from '../data/business';
 import { Placeholder } from './Placeholder';
+import { isPlaceholderValue } from '../lib/placeholder';
 import { IconArrowRight, IconPin } from './icons';
 
 export function ServiceArea() {
@@ -16,7 +17,11 @@ export function ServiceArea() {
           />
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-sm font-semibold text-ink-soft">Zonas de servicio:</span>
-            <Placeholder>{business.serviceAreas}</Placeholder>
+            {isPlaceholderValue(business.serviceAreas) ? (
+              <Placeholder>{business.serviceAreas}</Placeholder>
+            ) : (
+              <span className="text-sm text-ink-soft">{business.serviceAreas}</span>
+            )}
           </div>
           <a
             href={whatsappLink('Hola, quisiera saber si prestan servicio en mi zona de Caracas.')}

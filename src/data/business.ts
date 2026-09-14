@@ -28,7 +28,7 @@ export const business = {
   phone: '',
 
   /** Horario de atención. Ej: "Lunes a sábado, 8:00 am - 5:00 pm" */
-  schedule: '[HORARIO]',
+  schedule: 'Lunes a viernes, 8:00 am - 5:00 pm. Sábados y domingos a consulta.',
 
   /** Zonas específicas de Caracas donde trabaja. Ej: "Chacao, Baruta, Las Mercedes..." */
   serviceAreas: '[ZONAS DE SERVICIO]',

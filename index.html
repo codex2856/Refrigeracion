@@ -49,9 +49,10 @@
 
     <!--
       Datos estructurados Schema.org (LocalBusiness / HVACBusiness).
-      Solo se incluyen campos confirmados. NO se ha inventado teléfono, dirección,
-      horario ni valoraciones. Añade "telephone", "address", "openingHoursSpecification"
-      y "image" en cuanto tengamos esos datos reales (ver src/data/business.ts).
+      Solo se incluyen campos confirmados. NO se ha inventado teléfono, dirección
+      ni valoraciones. Añade "telephone", "address" (con calle) e "image" en
+      cuanto tengamos esos datos reales (ver src/data/business.ts). El horario
+      de fin de semana es "a consulta" y por eso no se incluye como horario fijo.
     -->
     <script type="application/ld+json">
       {
@@ -72,6 +73,14 @@
           "@type": "Person",
           "name": "Wilfredo Salazar"
         },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "17:00"
+          }
+        ],
         "sameAs": ["https://instagram.com/refrigeracion_was"],
         "url": "https://TU-DOMINIO-AQUI.com/",
         "priceRange": ""

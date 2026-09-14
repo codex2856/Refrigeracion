@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { business, hasPhone, hasWhatsapp, instagramLink, phoneLink, whatsappLink } from '../data/business';
 import { Placeholder } from './Placeholder';
+import { isPlaceholderValue } from '../lib/placeholder';
 import { IconClock, IconInstagram, IconPhone, IconPin, IconWhatsApp } from './icons';
 
 export function Contact() {
@@ -68,7 +69,11 @@ export function Contact() {
         >
           <span className="flex items-center gap-2">
             <IconClock className="h-4 w-4 text-ice" />
-            <Placeholder>{business.schedule}</Placeholder>
+            {isPlaceholderValue(business.schedule) ? (
+              <Placeholder>{business.schedule}</Placeholder>
+            ) : (
+              business.schedule
+            )}
           </span>
           <span className="flex items-center gap-2">
             <IconPin className="h-4 w-4 text-ice" />
