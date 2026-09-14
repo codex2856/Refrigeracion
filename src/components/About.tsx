@@ -48,9 +48,9 @@ export function About() {
       <div className="absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-ice/10 blur-[110px]" />
       <div className="relative mx-auto max-w-6xl scroll-mt-24 px-4 py-20 sm:px-6 lg:px-8">
         <SectionTitle
-          eyebrow="Nosotros"
-          title="Conoce Refrigeración WAS"
-          description="Detrás del servicio hay una persona, no un call center."
+          eyebrow="Confianza"
+          title="Por qué elegir a este técnico"
+          description="Un servicio pensado para resolver el problema de tu equipo con claridad y comunicación directa."
           tone="dark"
         />
 
