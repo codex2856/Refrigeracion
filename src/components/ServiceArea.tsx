@@ -1,9 +1,8 @@
-import { motion } from 'motion/react';
 import { SectionTitle } from './SectionTitle';
 import { business, whatsappLink } from '../data/business';
 import { Placeholder } from './Placeholder';
 import { isPlaceholderValue } from '../lib/placeholder';
-import { IconArrowRight, IconPin } from './icons';
+import { IconArrowRight } from './icons';
 
 export function ServiceArea() {
   return (
@@ -32,20 +31,14 @@ export function ServiceArea() {
           </a>
         </div>
 
-        <div className="relative mx-auto flex h-64 w-64 items-center justify-center sm:h-80 sm:w-80">
-          {[0, 1, 2].map((ring) => (
-            <motion.span
-              key={ring}
-              className="absolute rounded-full border-2 border-ice/30"
-              style={{ inset: `${ring * 15}%` }}
-              animate={{ scale: [1, 1.08, 1], opacity: [0.6, 0.2, 0.6] }}
-              transition={{ duration: 3.6, repeat: Infinity, ease: 'easeInOut', delay: ring * 0.4 }}
-            />
-          ))}
-          <span className="absolute inset-[38%] rounded-full bg-ice-light" />
-          <span className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-ink text-white shadow-lift">
-            <IconPin className="h-7 w-7" />
-          </span>
+        <div className="h-72 w-full overflow-hidden rounded-2xl border border-cloud-line shadow-soft sm:h-96">
+          <iframe
+            title="Mapa de Caracas, Venezuela"
+            src="https://maps.google.com/maps?q=Caracas,Venezuela&z=11&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="h-full w-full border-0"
+          />
         </div>
       </div>
     </section>
