@@ -1,4 +1,4 @@
-import { business, hasPhone, hasWhatsapp, instagramLink, phoneLink, whatsappLink } from '../data/business';
+import { business, hasPhone, hasWhatsapp, instagramLink, phoneLink, whatsappDisplay, whatsappLink } from '../data/business';
 import { Placeholder } from './Placeholder';
 import { isPlaceholderValue } from '../lib/placeholder';
 import { asset } from '../lib/asset';
@@ -56,7 +56,7 @@ export function Footer() {
               <IconWhatsApp className="h-4 w-4 text-whatsapp" />
               {hasWhatsapp ? (
                 <a href={whatsappLink()} className="transition-colors hover:text-ice">
-                  {business.whatsapp}
+                  {whatsappDisplay()}
                 </a>
               ) : (
                 <Placeholder>[WHATSAPP]</Placeholder>

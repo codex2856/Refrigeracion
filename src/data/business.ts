@@ -77,6 +77,11 @@ export function whatsappLink(message?: string): string {
   return `https://wa.me/${digits}${text}`;
 }
 
+/** Número de WhatsApp formateado con "+" para mostrar en pantalla. */
+export function whatsappDisplay(): string {
+  return hasWhatsapp ? `+${business.whatsapp}` : '';
+}
+
 /**
  * Enlace tel: listo para usar. Mientras no haya teléfono real,
  * apunta a la sección de contacto en vez de romper el botón.
