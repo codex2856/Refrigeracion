@@ -49,10 +49,9 @@
 
     <!--
       Datos estructurados Schema.org (LocalBusiness / HVACBusiness).
-      Solo se incluyen campos confirmados. NO se ha inventado teléfono, dirección
-      ni valoraciones. Añade "telephone", "address" (con calle) e "image" en
-      cuanto tengamos esos datos reales (ver src/data/business.ts). El horario
-      de fin de semana es "a consulta" y por eso no se incluye como horario fijo.
+      Solo se incluyen campos confirmados. NO se ha inventado dirección ni
+      valoraciones. Añade "address" (con calle) e "image" en cuanto tengamos
+      esos datos reales (ver src/data/business.ts).
     -->
     <script type="application/ld+json">
       {
@@ -60,6 +59,7 @@
         "@type": "HVACBusiness",
         "name": "Refrigeración WAS",
         "description": "Servicio técnico de reparación y mantenimiento de aires acondicionados, neveras, lavadoras y electrodomésticos en Caracas, Venezuela.",
+        "telephone": "+58 414-324-3716",
         "areaServed": {
           "@type": "City",
           "name": "Caracas, Venezuela"
@@ -76,9 +76,15 @@
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "08:00",
-            "closes": "17:00"
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "10:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Sunday"],
+            "opens": "12:00",
+            "closes": "20:00"
           }
         ],
         "sameAs": ["https://instagram.com/refrigeracion_was"],

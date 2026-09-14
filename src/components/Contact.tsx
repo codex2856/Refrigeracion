@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { business, hasPhone, hasWhatsapp, instagramLink, phoneLink, whatsappLink } from '../data/business';
-import { Placeholder } from './Placeholder';
-import { isPlaceholderValue } from '../lib/placeholder';
+import { ScheduleTable } from './ScheduleTable';
 import { IconClock, IconInstagram, IconPhone, IconPin, IconWhatsApp } from './icons';
 
 export function Contact() {
@@ -61,24 +60,26 @@ export function Contact() {
         </motion.div>
 
         <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-4 flex flex-col items-center gap-2"
+        >
+          <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-white/50">
+            <IconClock className="h-4 w-4 text-ice" />
+            Horario
+          </span>
+          <ScheduleTable />
+        </motion.div>
+
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-4 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/70"
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/70"
         >
-          <span className="flex items-start gap-2">
-            <IconClock className="mt-0.5 h-4 w-4 flex-none text-ice" />
-            {isPlaceholderValue(business.schedule) ? (
-              <Placeholder>{business.schedule}</Placeholder>
-            ) : (
-              <span className="flex flex-col text-left leading-relaxed">
-                {business.schedule.split('\n').map((line) => (
-                  <span key={line}>{line}</span>
-                ))}
-              </span>
-            )}
-          </span>
           <span className="flex items-center gap-2">
             <IconPin className="h-4 w-4 text-ice" />
             {business.location}

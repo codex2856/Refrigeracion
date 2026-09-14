@@ -22,13 +22,21 @@ export const business = {
   bio: '',
 
   /** Número de WhatsApp SOLO dígitos con código de país, sin +, sin espacios. Ej: "584121234567" */
-  whatsapp: '',
+  whatsapp: '584143243716',
 
   /** Teléfono para el botón "Llamar". Ej: "+58 412-123-4567" */
-  phone: '',
+  phone: '+58 414-324-3716',
 
-  /** Horario de atención. Cada línea (separada por \n) se muestra escalonada. */
-  schedule: 'Lunes a viernes: 8:00 am - 5:00 pm\nSábados y domingos: a consulta',
+  /** Horario de atención, día por día. Deja el array vacío mientras no esté confirmado. */
+  schedule: [
+    { day: 'Lunes', hours: '10:00 a.m. – 8:00 p.m.' },
+    { day: 'Martes', hours: '10:00 a.m. – 8:00 p.m.' },
+    { day: 'Miércoles', hours: '10:00 a.m. – 8:00 p.m.' },
+    { day: 'Jueves', hours: '10:00 a.m. – 8:00 p.m.' },
+    { day: 'Viernes', hours: '10:00 a.m. – 8:00 p.m.' },
+    { day: 'Sábado', hours: '10:00 a.m. – 8:00 p.m.' },
+    { day: 'Domingo', hours: '12:00 – 8:00 p.m.' },
+  ],
 
   /** Zonas específicas de Caracas donde trabaja. Ej: "Chacao, Baruta, Las Mercedes..." */
   serviceAreas: '[ZONAS DE SERVICIO]',
@@ -54,6 +62,9 @@ export const hasWhatsapp = business.whatsapp.trim().length > 0;
 
 /** true una vez haya un teléfono real cargado. */
 export const hasPhone = business.phone.trim().length > 0;
+
+/** true una vez haya un horario real cargado. */
+export const hasSchedule = business.schedule.length > 0;
 
 /**
  * Enlace de WhatsApp listo para usar. Mientras no haya número real,

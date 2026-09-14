@@ -2,6 +2,7 @@ import { business, hasPhone, hasWhatsapp, instagramLink, phoneLink, whatsappLink
 import { Placeholder } from './Placeholder';
 import { isPlaceholderValue } from '../lib/placeholder';
 import { asset } from '../lib/asset';
+import { ScheduleTable } from './ScheduleTable';
 import { IconInstagram, IconPhone, IconWhatsApp } from './icons';
 
 const NAV_LINKS = [
@@ -87,15 +88,7 @@ export function Footer() {
 
         <div className="flex flex-col gap-3">
           <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-white/50">Horario</h3>
-          {isPlaceholderValue(business.schedule) ? (
-            <Placeholder>{business.schedule}</Placeholder>
-          ) : (
-            <div className="flex flex-col gap-0.5 text-sm text-white/75">
-              {business.schedule.split('\n').map((line) => (
-                <p key={line}>{line}</p>
-              ))}
-            </div>
-          )}
+          <ScheduleTable />
         </div>
       </div>
 
