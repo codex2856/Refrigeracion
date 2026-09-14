@@ -4,11 +4,12 @@ import { isPlaceholderValue } from '../lib/placeholder';
 import { asset } from '../lib/asset';
 import { IconInstagram, IconPhone, IconWhatsApp } from './icons';
 
-const SERVICE_LINKS = [
-  { href: '#servicios', label: 'Aire acondicionado' },
-  { href: '#servicios', label: 'Neveras' },
-  { href: '#servicios', label: 'Lavadoras' },
-  { href: '#servicios', label: 'Electrodomésticos' },
+const NAV_LINKS = [
+  { href: '#servicios', label: 'Servicios' },
+  { href: '#nosotros', label: 'Nosotros' },
+  { href: '#trabajos', label: 'Trabajos' },
+  { href: '#faq', label: 'Preguntas frecuentes' },
+  { href: '#contacto', label: 'Contacto' },
 ];
 
 export function Footer() {
@@ -19,7 +20,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-2.5">
-            <img src={asset('logo-mark.png')} alt="" className="h-10 w-auto" />
+            <img src={asset('logo-mark.png')} alt="" loading="lazy" width={240} height={159} className="h-10 w-auto" />
             {isPlaceholderValue(business.name) ? (
               <Placeholder>{business.name}</Placeholder>
             ) : (
@@ -34,9 +35,9 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col gap-3">
-          <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-white/50">Servicios</h3>
+          <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-white/50">Enlaces</h3>
           <ul className="flex flex-col gap-2">
-            {SERVICE_LINKS.map((l) => (
+            {NAV_LINKS.map((l) => (
               <li key={l.label}>
                 <a href={l.href} className="text-sm text-white/75 transition-colors hover:text-ice">
                   {l.label}

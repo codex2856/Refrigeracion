@@ -15,6 +15,12 @@ export const business = {
   /** Usuario de Instagram, sin @. */
   instagram: 'refrigeracion_was',
 
+  /** Foto real del técnico. Ej: "/team/wilfredo.jpg" (colócala en /public). */
+  photo: '',
+
+  /** Bio corta para la sección "Conoce Refrigeración WAS". 2-3 frases, en su propia voz. */
+  bio: '',
+
   /** Número de WhatsApp SOLO dígitos con código de país, sin +, sin espacios. Ej: "584121234567" */
   whatsapp: '',
 

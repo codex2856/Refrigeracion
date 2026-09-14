@@ -1,8 +1,8 @@
 import { motion } from 'motion/react';
-import { business, hasPhone, hasWhatsapp, phoneLink, whatsappLink } from '../data/business';
+import { business, hasWhatsapp, whatsappLink } from '../data/business';
 import { Placeholder } from './Placeholder';
 import { asset } from '../lib/asset';
-import { IconDroplet, IconPhone, IconPin, IconSnowflake, IconWhatsApp, IconWind } from './icons';
+import { IconArrowRight, IconDroplet, IconPin, IconSnowflake, IconWhatsApp, IconWind } from './icons';
 
 const floatIcons = [
   { Icon: IconSnowflake, top: '12%', left: '82%', size: 34, duration: 10, delay: 0, rotate: 0 },
@@ -39,7 +39,7 @@ export function Hero() {
           transition={{ duration: 0.5 }}
           className="flex w-full flex-col items-center gap-2 text-center"
         >
-          <img src={asset('logo-mark.png')} alt="" className="h-24 w-auto sm:h-32 lg:h-36" />
+          <img src={asset('logo-mark.png')} alt="" width={240} height={159} className="h-24 w-auto sm:h-32 lg:h-36" />
           <span className="font-display text-2xl font-extrabold uppercase leading-tight tracking-wide text-white sm:text-4xl">
             {business.name}
           </span>
@@ -97,38 +97,31 @@ export function Hero() {
           className="mt-2 flex flex-col gap-3 sm:flex-row sm:items-center"
         >
           <a
-            href={whatsappLink('Hola, tengo un problema con un equipo y quisiera cotizar una visita.')}
+            href={whatsappLink('Hola, quisiera solicitar un servicio.')}
             className="group inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-4 text-sm font-bold uppercase tracking-[0.08em] text-white shadow-lift transition-transform hover:scale-[1.03] active:scale-95"
           >
             <IconWhatsApp className="h-5 w-5" />
-            Contactar por WhatsApp
+            Solicitar servicio por WhatsApp
           </a>
           <a
-            href={phoneLink()}
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/5 px-6 py-4 text-sm font-bold uppercase tracking-[0.08em] text-white transition-colors hover:bg-white/10"
+            href="#servicios"
+            className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/5 px-6 py-4 text-sm font-bold uppercase tracking-[0.08em] text-white transition-colors hover:bg-white/10"
           >
-            <IconPhone className="h-5 w-5" />
-            Llamar ahora
+            Ver nuestros servicios
+            <IconArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-white/50"
-        >
-          {!hasWhatsapp && (
-            <span className="flex items-center gap-1.5">
-              WhatsApp: <Placeholder>[WHATSAPP]</Placeholder>
-            </span>
-          )}
-          {!hasPhone && (
-            <span className="flex items-center gap-1.5">
-              Teléfono: <Placeholder>[TELÉFONO]</Placeholder>
-            </span>
-          )}
-        </motion.div>
+        {!hasWhatsapp && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="flex items-center gap-1.5 text-xs text-white/50"
+          >
+            WhatsApp: <Placeholder>[WHATSAPP]</Placeholder>
+          </motion.div>
+        )}
       </div>
     </header>
   );

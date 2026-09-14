@@ -1,51 +1,22 @@
 import { motion } from 'motion/react';
 import { SectionTitle } from './SectionTitle';
 import { whatsappLink } from '../data/business';
-import { IconArrowRight, IconFridge, IconWasher, IconWind, IconWrench } from './icons';
-import type { ComponentType, SVGProps } from 'react';
-
-interface Service {
-  Icon: ComponentType<SVGProps<SVGSVGElement>>;
-  title: string;
-  description: string;
-}
-
-const SERVICES: Service[] = [
-  {
-    Icon: IconWind,
-    title: 'Aire acondicionado',
-    description: 'Reparación, mantenimiento y diagnóstico de equipos de aire acondicionado.',
-  },
-  {
-    Icon: IconFridge,
-    title: 'Neveras',
-    description: 'Diagnóstico y reparación de neveras y refrigeradores.',
-  },
-  {
-    Icon: IconWasher,
-    title: 'Lavadoras',
-    description: 'Reparación y mantenimiento de lavadoras.',
-  },
-  {
-    Icon: IconWrench,
-    title: 'Electrodomésticos',
-    description: 'Diagnóstico y reparación de diferentes equipos del hogar.',
-  },
-];
+import { SERVICES } from '../data/services';
+import { IconArrowRight } from './icons';
 
 export function Services() {
   return (
     <section id="servicios" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-20 sm:px-6 lg:px-8">
       <SectionTitle
         eyebrow="Servicios"
-        title="Qué reparamos"
+        title="Nuestros servicios"
         description="Servicio técnico enfocado en los equipos que más se dañan en el hogar."
       />
 
       <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {SERVICES.map((s, i) => (
           <motion.a
-            key={s.title}
+            key={s.slug}
             href={whatsappLink(`Hola, necesito ayuda con: ${s.title}.`)}
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +33,7 @@ export function Services() {
               <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{s.description}</p>
             </div>
             <span className="mt-auto inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.08em] text-ice-dark">
-              Contactar
+              Solicitar
               <IconArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </span>
           </motion.a>

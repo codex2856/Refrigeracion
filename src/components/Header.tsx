@@ -6,10 +6,9 @@ import { IconMenu, IconWhatsApp, IconX } from './icons';
 
 const LINKS = [
   { href: '#servicios', label: 'Servicios' },
-  { href: '#problemas', label: 'Problemas' },
-  { href: '#nosotros', label: 'Por qué elegirnos' },
-  { href: '#zona', label: 'Zona' },
+  { href: '#nosotros', label: 'Nosotros' },
   { href: '#trabajos', label: 'Trabajos' },
+  { href: '#faq', label: 'Preguntas' },
   { href: '#contacto', label: 'Contacto' },
 ];
 
@@ -32,7 +31,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <a href="#top" className="flex min-w-0 items-center gap-2.5 text-white">
-          <img src={asset('logo-mark.png')} alt="" className="h-9 w-auto flex-none sm:h-10" />
+          <img src={asset('logo-mark.png')} alt="" width={240} height={159} className="h-9 w-auto flex-none sm:h-10" />
           <span className="truncate font-display text-base font-extrabold leading-none tracking-tight sm:text-lg lg:text-xl">
             {business.name}
           </span>

@@ -17,7 +17,7 @@ export function Contact() {
           transition={{ duration: 0.5 }}
           className="font-display text-3xl font-extrabold leading-tight text-white sm:text-5xl"
         >
-          ¿Necesitas un técnico?
+          ¿Necesitas reparar tu equipo?
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -26,7 +26,8 @@ export function Contact() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="max-w-lg text-base leading-relaxed text-white/70 sm:text-lg"
         >
-          Contacta directamente y cuéntanos qué problema presenta tu equipo.
+          Cuéntanos qué le pasa a tu aire acondicionado, nevera, lavadora o electrodoméstico y coordinamos la
+          visita.
         </motion.p>
 
         <motion.div
