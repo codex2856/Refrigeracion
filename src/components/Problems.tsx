@@ -12,7 +12,7 @@ interface Problem {
 const PROBLEMS: Problem[] = [
   { Icon: IconWind, text: 'El aire acondicionado no enfría.' },
   { Icon: IconFridge, text: 'La nevera no enfría.' },
-  { Icon: IconWasher, text: 'La lavadora no funciona.' },
+  { Icon: IconWasher, text: 'La lavadora o secadora no funciona.' },
   { Icon: IconAlert, text: 'El equipo hace ruidos extraños.' },
   { Icon: IconDroplet, text: 'El aire acondicionado pierde agua.' },
   { Icon: IconPower, text: 'El equipo se apaga.' },

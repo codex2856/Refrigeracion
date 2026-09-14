@@ -7,7 +7,7 @@ import { IconCamera, IconFridge, IconWasher, IconWind, IconWrench } from './icon
 const CATEGORY_ICON: Record<GalleryCategory, typeof IconWind> = {
   'Aires acondicionados': IconWind,
   Neveras: IconFridge,
-  Lavadoras: IconWasher,
+  'Lavadoras/Secadoras': IconWasher,
   'Otros electrodomésticos': IconWrench,
 };
 

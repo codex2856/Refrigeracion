@@ -10,7 +10,7 @@ const floatIcons = [
   { Icon: IconDroplet, top: '20%', left: '6%', size: 22, duration: 9, delay: 1, rotate: 0 },
 ];
 
-const chips = ['Aires acondicionados', 'Neveras', 'Lavadoras', 'Electrodomésticos'];
+const chips = ['Aires acondicionados', 'Neveras', 'Lavadoras/Secadoras', 'Electrodomésticos'];
 
 export function Hero() {
   return (
@@ -70,8 +70,8 @@ export function Hero() {
           transition={{ duration: 0.55, delay: 0.2 }}
           className="max-w-xl text-base leading-relaxed text-white/75 sm:text-lg"
         >
-          Reparación y mantenimiento de aires acondicionados, neveras, lavadoras y electrodomésticos.
-          Diagnóstico claro y atención directa con el técnico, en Caracas.
+          Reparación y mantenimiento de aires acondicionados, neveras, lavadoras/secadoras y
+          electrodomésticos. Diagnóstico claro y atención directa con el técnico, en Caracas.
         </motion.p>
 
         <motion.div

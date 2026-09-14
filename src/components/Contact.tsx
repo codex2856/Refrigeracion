@@ -26,8 +26,8 @@ export function Contact() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="max-w-lg text-base leading-relaxed text-white/70 sm:text-lg"
         >
-          Cuéntanos qué le pasa a tu aire acondicionado, nevera, lavadora o electrodoméstico y coordinamos la
-          visita.
+          Cuéntanos qué le pasa a tu aire acondicionado, nevera, lavadora/secadora o electrodoméstico y
+          coordinamos la visita.
         </motion.p>
 
         <motion.span

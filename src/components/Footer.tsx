@@ -30,7 +30,7 @@ export function Footer() {
           </div>
           <p className="text-sm leading-relaxed text-white/60">
             Técnico de refrigeración en Caracas, Venezuela. Reparación y mantenimiento de aires
-            acondicionados, neveras, lavadoras y electrodomésticos.
+            acondicionados, neveras, lavadoras/secadoras y electrodomésticos.
           </p>
           <p className="text-xs text-white/50">Atendido por {business.ownerName}</p>
         </div>

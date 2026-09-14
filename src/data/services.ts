@@ -30,8 +30,8 @@ export const SERVICES: Service[] = [
   {
     slug: 'lavadoras',
     Icon: IconWasher,
-    title: 'Lavadoras',
-    description: 'Reparación y mantenimiento de lavadoras.',
+    title: 'Lavadoras/Secadoras',
+    description: 'Reparación y mantenimiento de lavadoras y secadoras.',
   },
   {
     slug: 'electrodomesticos',

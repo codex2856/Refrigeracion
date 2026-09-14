@@ -19,7 +19,7 @@ export const FAQ: FaqItem[] = [
   },
   {
     question: '¿Qué equipos reparan?',
-    answer: 'Aires acondicionados, neveras, lavadoras y electrodomésticos en general.',
+    answer: 'Aires acondicionados, neveras, lavadoras/secadoras y electrodomésticos en general.',
   },
   {
     question: '¿Qué zonas cubren?',

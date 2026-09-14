@@ -1,4 +1,4 @@
-export type GalleryCategory = 'Aires acondicionados' | 'Neveras' | 'Lavadoras' | 'Otros electrodomésticos';
+export type GalleryCategory = 'Aires acondicionados' | 'Neveras' | 'Lavadoras/Secadoras' | 'Otros electrodomésticos';
 
 export interface GalleryItem {
   category: GalleryCategory;
@@ -9,7 +9,7 @@ export interface GalleryItem {
 export const GALLERY_CATEGORIES: GalleryCategory[] = [
   'Aires acondicionados',
   'Neveras',
-  'Lavadoras',
+  'Lavadoras/Secadoras',
   'Otros electrodomésticos',
 ];
 
@@ -23,8 +23,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   { category: 'Aires acondicionados', image: null },
   { category: 'Neveras', image: null },
   { category: 'Neveras', image: null },
-  { category: 'Lavadoras', image: null },
-  { category: 'Lavadoras', image: null },
+  { category: 'Lavadoras/Secadoras', image: null },
+  { category: 'Lavadoras/Secadoras', image: null },
   { category: 'Otros electrodomésticos', image: null },
   { category: 'Otros electrodomésticos', image: null },
 ];
