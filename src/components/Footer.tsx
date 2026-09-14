@@ -90,7 +90,11 @@ export function Footer() {
           {isPlaceholderValue(business.schedule) ? (
             <Placeholder>{business.schedule}</Placeholder>
           ) : (
-            <p className="text-sm text-white/75">{business.schedule}</p>
+            <div className="flex flex-col gap-0.5 text-sm text-white/75">
+              {business.schedule.split('\n').map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </div>
           )}
         </div>
       </div>

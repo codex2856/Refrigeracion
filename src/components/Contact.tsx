@@ -67,12 +67,16 @@ export function Contact() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-4 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/70"
         >
-          <span className="flex items-center gap-2">
-            <IconClock className="h-4 w-4 text-ice" />
+          <span className="flex items-start gap-2">
+            <IconClock className="mt-0.5 h-4 w-4 flex-none text-ice" />
             {isPlaceholderValue(business.schedule) ? (
               <Placeholder>{business.schedule}</Placeholder>
             ) : (
-              business.schedule
+              <span className="flex flex-col text-left leading-relaxed">
+                {business.schedule.split('\n').map((line) => (
+                  <span key={line}>{line}</span>
+                ))}
+              </span>
             )}
           </span>
           <span className="flex items-center gap-2">

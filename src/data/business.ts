@@ -27,8 +27,8 @@ export const business = {
   /** Teléfono para el botón "Llamar". Ej: "+58 412-123-4567" */
   phone: '',
 
-  /** Horario de atención. Ej: "Lunes a sábado, 8:00 am - 5:00 pm" */
-  schedule: 'Lunes a viernes, 8:00 am - 5:00 pm. Sábados y domingos a consulta.',
+  /** Horario de atención. Cada línea (separada por \n) se muestra escalonada. */
+  schedule: 'Lunes a viernes: 8:00 am - 5:00 pm\nSábados y domingos: a consulta',
 
   /** Zonas específicas de Caracas donde trabaja. Ej: "Chacao, Baruta, Las Mercedes..." */
   serviceAreas: '[ZONAS DE SERVICIO]',
