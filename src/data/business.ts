@@ -29,13 +29,13 @@ export const business = {
 
   /** Horario de atención, día por día. Deja el array vacío mientras no esté confirmado. */
   schedule: [
-    { day: 'Lunes', hours: '10:00 a.m. – 8:00 p.m.' },
-    { day: 'Martes', hours: '10:00 a.m. – 8:00 p.m.' },
-    { day: 'Miércoles', hours: '10:00 a.m. – 8:00 p.m.' },
-    { day: 'Jueves', hours: '10:00 a.m. – 8:00 p.m.' },
-    { day: 'Viernes', hours: '10:00 a.m. – 8:00 p.m.' },
-    { day: 'Sábado', hours: '10:00 a.m. – 8:00 p.m.' },
-    { day: 'Domingo', hours: '12:00 – 8:00 p.m.' },
+    { day: 'Lunes', hours: '8:00 a.m. – 5:00 p.m.' },
+    { day: 'Martes', hours: '8:00 a.m. – 5:00 p.m.' },
+    { day: 'Miércoles', hours: '8:00 a.m. – 5:00 p.m.' },
+    { day: 'Jueves', hours: '8:00 a.m. – 5:00 p.m.' },
+    { day: 'Viernes', hours: '8:00 a.m. – 5:00 p.m.' },
+    { day: 'Sábado', hours: 'Bajo consulta' },
+    { day: 'Domingo', hours: 'Bajo consulta' },
   ],
 
   /** Zonas específicas de Caracas donde trabaja. Ej: "Chacao, Baruta, Las Mercedes..." */
