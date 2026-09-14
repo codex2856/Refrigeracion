@@ -2,7 +2,7 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { Problems } from './components/Problems';
-import { About } from './components/About';
+import { WhyUs } from './components/WhyUs';
 import { HowItWorks } from './components/HowItWorks';
 import { ServiceArea } from './components/ServiceArea';
 import { Gallery } from './components/Gallery';
@@ -20,7 +20,7 @@ function App() {
         <Hero />
         <Services />
         <Problems />
-        <About />
+        <WhyUs />
         <HowItWorks />
         <ServiceArea />
         <Gallery />
