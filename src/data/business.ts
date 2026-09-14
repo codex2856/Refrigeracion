@@ -55,6 +55,9 @@ export const business = {
 
   /** Garantía ofrecida. Ej: "30 días en repuestos y mano de obra" */
   warranty: '',
+
+  /** Costo de la visita/consulta (diagnóstico), sin incluir la reparación. Ej: "$10" */
+  visitFee: '$10',
 } as const;
 
 /** true una vez haya un número de WhatsApp real cargado. */

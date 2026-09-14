@@ -29,8 +29,12 @@ export const FAQ: FaqItem[] = [
         : `Trabajamos en ${business.serviceAreas}, ${business.location}.`,
   },
   {
+    question: '¿Cuánto cuesta la visita?',
+    answer: `La visita para diagnosticar el equipo cuesta ${business.visitFee}.`,
+  },
+  {
     question: '¿Cuánto cuesta una reparación?',
-    answer: `El costo depende del equipo y la falla. ${PENDING}`,
+    answer: `La visita de diagnóstico cuesta ${business.visitFee}. El costo de la reparación en sí depende del equipo y la falla. ${PENDING}`,
   },
   {
     question: '¿Cuánto tarda una reparación?',

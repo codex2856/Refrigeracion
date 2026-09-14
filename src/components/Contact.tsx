@@ -30,6 +30,16 @@ export function Contact() {
           visita.
         </motion.p>
 
+        <motion.span
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="frost inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold text-frost"
+        >
+          Visita de diagnóstico: {business.visitFee}
+        </motion.span>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
