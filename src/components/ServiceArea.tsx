@@ -1,7 +1,5 @@
 import { SectionTitle } from './SectionTitle';
-import { business, whatsappLink } from '../data/business';
-import { Placeholder } from './Placeholder';
-import { isPlaceholderValue } from '../lib/placeholder';
+import { whatsappLink } from '../data/business';
 import { IconArrowRight } from './icons';
 
 export function ServiceArea() {
@@ -14,14 +12,6 @@ export function ServiceArea() {
             title="Servicio técnico en Caracas"
             description="Atención a domicilio dentro de Caracas, Venezuela. Escríbenos con tu ubicación para confirmar la cobertura."
           />
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-sm font-semibold text-ink-soft">Zonas de servicio:</span>
-            {isPlaceholderValue(business.serviceAreas) ? (
-              <Placeholder>{business.serviceAreas}</Placeholder>
-            ) : (
-              <span className="text-sm text-ink-soft">{business.serviceAreas}</span>
-            )}
-          </div>
           <a
             href={whatsappLink('Hola, quisiera saber si prestan servicio en mi zona de Caracas.')}
             className="group inline-flex w-fit items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition-transform hover:scale-105"

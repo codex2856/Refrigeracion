@@ -6,7 +6,6 @@ import { WhyUs } from './components/WhyUs';
 import { HowItWorks } from './components/HowItWorks';
 import { ServiceArea } from './components/ServiceArea';
 import { Gallery } from './components/Gallery';
-import { Testimonials } from './components/Testimonials';
 import { FAQ } from './components/FAQ';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
@@ -24,7 +23,7 @@ function App() {
         <HowItWorks />
         <ServiceArea />
         <Gallery />
-        <Testimonials />
+        {/* <Testimonials /> — oculto a pedido del usuario hasta tener reseñas reales que montar; ver src/components/Testimonials.tsx */}
         <FAQ />
         <Contact />
       </main>
