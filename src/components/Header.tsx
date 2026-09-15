@@ -7,7 +7,6 @@ import { IconMenu, IconWhatsApp, IconX } from './icons';
 const LINKS = [
   { href: '#servicios', label: 'Servicios' },
   { href: '#nosotros', label: 'Nosotros' },
-  { href: '#trabajos', label: 'Trabajos' },
   { href: '#faq', label: 'Preguntas' },
   { href: '#contacto', label: 'Contacto' },
 ];

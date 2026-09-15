@@ -5,7 +5,6 @@ import { Problems } from './components/Problems';
 import { WhyUs } from './components/WhyUs';
 import { HowItWorks } from './components/HowItWorks';
 import { ServiceArea } from './components/ServiceArea';
-import { Gallery } from './components/Gallery';
 import { FAQ } from './components/FAQ';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
@@ -22,7 +21,7 @@ function App() {
         <WhyUs />
         <HowItWorks />
         <ServiceArea />
-        <Gallery />
+        {/* <Gallery /> — oculto a pedido del usuario hasta tener fotos reales de trabajos que montar; ver src/components/Gallery.tsx */}
         {/* <Testimonials /> — oculto a pedido del usuario hasta tener reseñas reales que montar; ver src/components/Testimonials.tsx */}
         <FAQ />
         <Contact />

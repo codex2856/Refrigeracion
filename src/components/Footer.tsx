@@ -8,7 +8,6 @@ import { IconInstagram, IconPhone, IconWhatsApp } from './icons';
 const NAV_LINKS = [
   { href: '#servicios', label: 'Servicios' },
   { href: '#nosotros', label: 'Nosotros' },
-  { href: '#trabajos', label: 'Trabajos' },
   { href: '#faq', label: 'Preguntas frecuentes' },
   { href: '#contacto', label: 'Contacto' },
 ];
