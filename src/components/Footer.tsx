@@ -91,8 +91,13 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 max-w-6xl border-t border-night-line pt-6 text-xs text-white/40">
-        © {year} {isPlaceholderValue(business.name) ? 'Técnico de Refrigeración en Caracas' : business.name}. Todos los derechos reservados.
+      <div className="mx-auto mt-10 flex max-w-6xl flex-wrap items-center justify-between gap-3 border-t border-night-line pt-6 text-xs text-white/40">
+        <span>
+          © {year} {isPlaceholderValue(business.name) ? 'Técnico de Refrigeración en Caracas' : business.name}. Todos los derechos reservados.
+        </span>
+        <a href="privacidad.html" className="transition-colors hover:text-ice">
+          Política de privacidad
+        </a>
       </div>
     </footer>
   );
