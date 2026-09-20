@@ -5,12 +5,10 @@ export interface FaqItem {
   answer: string;
 }
 
-const PENDING = '[Información pendiente de confirmar]';
-
 /**
- * Preguntas frecuentes. Las respuestas que dependen de un dato del negocio
- * que todavía no tenemos (precio, garantía, tiempos, zonas) usan el
- * placeholder PENDING — no se ha inventado ninguna cifra ni condición.
+ * Preguntas frecuentes. Las respuestas evitan cifras o condiciones que no
+ * se han confirmado (ver src/data/business.ts) sin dejar frases de
+ * marcador de posición en el texto visible.
  */
 export const FAQ: FaqItem[] = [
   {
@@ -25,7 +23,7 @@ export const FAQ: FaqItem[] = [
     question: '¿Qué zonas cubren?',
     answer:
       business.serviceAreas.startsWith('[')
-        ? `Trabajamos en ${business.location}. Zonas específicas: ${PENDING}`
+        ? `Trabajamos en ${business.location}. Escríbenos con tu ubicación para confirmar la cobertura.`
         : `Trabajamos en ${business.serviceAreas}, ${business.location}.`,
   },
   {
@@ -34,15 +32,15 @@ export const FAQ: FaqItem[] = [
   },
   {
     question: '¿Cuánto cuesta una reparación?',
-    answer: `La visita de diagnóstico cuesta ${business.visitFee}. El costo de la reparación en sí depende del equipo y la falla. ${PENDING}`,
+    answer: `La visita de diagnóstico cuesta ${business.visitFee}. El costo de la reparación en sí depende del equipo y la falla, y se cotiza después del diagnóstico.`,
   },
   {
     question: '¿Cuánto tarda una reparación?',
-    answer: `Depende del diagnóstico y la disponibilidad de repuestos. ${PENDING}`,
+    answer: 'Depende del diagnóstico y la disponibilidad de repuestos.',
   },
   {
     question: '¿Ofrecen garantía?',
-    answer: business.warranty || PENDING,
+    answer: business.warranty,
   },
   {
     question: '¿Qué hago si mi nevera no enfría?',

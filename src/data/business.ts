@@ -54,7 +54,7 @@ export const business = {
   brandsServiced: '',
 
   /** Garantía ofrecida. Ej: "30 días en repuestos y mano de obra" */
-  warranty: '',
+  warranty: 'Sí, el trabajo realizado cuenta con garantía.',
 
   /** Costo de la visita/consulta (diagnóstico), sin incluir la reparación. Ej: "$10" */
   visitFee: '$10',
