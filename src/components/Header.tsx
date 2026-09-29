@@ -2,13 +2,14 @@ import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { business, whatsappLink } from '../data/business';
 import { asset } from '../lib/asset';
+import { homeLink } from '../lib/nav';
 import { IconMenu, IconWhatsApp, IconX } from './icons';
 
 const LINKS = [
-  { href: '#servicios', label: 'Servicios' },
-  { href: '#nosotros', label: 'Nosotros' },
-  { href: '#faq', label: 'Preguntas' },
-  { href: '#contacto', label: 'Contacto' },
+  { hash: 'servicios', label: 'Servicios' },
+  { hash: 'nosotros', label: 'Nosotros' },
+  { hash: 'faq', label: 'Preguntas' },
+  { hash: 'contacto', label: 'Contacto' },
 ];
 
 export function Header() {
@@ -29,7 +30,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <a href="#top" className="flex min-w-0 items-center gap-2.5 text-white">
+        <a href={homeLink()} className="flex min-w-0 items-center gap-2.5 text-white">
           <img src={asset('logo-mark.png')} alt="" width={240} height={159} className="h-9 w-auto flex-none sm:h-10" />
           <span className="truncate font-display text-base font-extrabold leading-none tracking-tight sm:text-lg lg:text-xl">
             {business.name}
@@ -39,8 +40,8 @@ export function Header() {
         <nav className="hidden items-center gap-6 lg:flex">
           {LINKS.map((l) => (
             <a
-              key={l.href}
-              href={l.href}
+              key={l.hash}
+              href={homeLink(l.hash)}
               className="group relative text-xs font-semibold uppercase tracking-[0.12em] text-white/75 transition-colors hover:text-white"
             >
               {l.label}
@@ -78,8 +79,8 @@ export function Header() {
         <div className="flex flex-col gap-1 px-4 pb-4">
           {LINKS.map((l) => (
             <a
-              key={l.href}
-              href={l.href}
+              key={l.hash}
+              href={homeLink(l.hash)}
               onClick={() => setOpen(false)}
               className="rounded-lg px-2 py-2.5 text-sm font-semibold uppercase tracking-wide text-white/90 hover:bg-white/5"
             >

@@ -2,14 +2,15 @@ import { business, hasPhone, hasWhatsapp, instagramLink, phoneLink, whatsappDisp
 import { Placeholder } from './Placeholder';
 import { isPlaceholderValue } from '../lib/placeholder';
 import { asset } from '../lib/asset';
+import { homeLink } from '../lib/nav';
 import { ScheduleTable } from './ScheduleTable';
 import { IconInstagram, IconPhone, IconWhatsApp } from './icons';
 
 const NAV_LINKS = [
-  { href: '#servicios', label: 'Servicios' },
-  { href: '#nosotros', label: 'Nosotros' },
-  { href: '#faq', label: 'Preguntas frecuentes' },
-  { href: '#contacto', label: 'Contacto' },
+  { hash: 'servicios', label: 'Servicios' },
+  { hash: 'nosotros', label: 'Nosotros' },
+  { hash: 'faq', label: 'Preguntas frecuentes' },
+  { hash: 'contacto', label: 'Contacto' },
 ];
 
 export function Footer() {
@@ -39,7 +40,7 @@ export function Footer() {
           <ul className="flex flex-col gap-2">
             {NAV_LINKS.map((l) => (
               <li key={l.label}>
-                <a href={l.href} className="text-sm text-white/75 transition-colors hover:text-ice">
+                <a href={homeLink(l.hash)} className="text-sm text-white/75 transition-colors hover:text-ice">
                   {l.label}
                 </a>
               </li>

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
@@ -11,6 +12,15 @@ import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 function App() {
+  useEffect(() => {
+    // Al cargar la página desde otra (ej. index.html#servicios desde
+    // privacidad.html), el navegador intenta saltar al ancla antes de que
+    // React monte la sección — hay que reintentarlo manualmente.
+    if (window.location.hash) {
+      document.querySelector(window.location.hash)?.scrollIntoView();
+    }
+  }, []);
+
   return (
     <>
       <Header />
